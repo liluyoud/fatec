@@ -1,0 +1,10 @@
+﻿@model List<Fatec.Models.Pessoa>
+<h2>Pessoas</h2>
+<p>Todas as pessoas</p>
+
+@foreach (var item in Model)
+{
+    <p>
+        <a asp-action="Cadastro" asp-route-id="@item.Id">@item.Nome</a>
+    </p>
+}

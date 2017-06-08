@@ -1,0 +1,43 @@
+﻿@model Fatec.Models.Pessoa
+<h2>Pessoa</h2>
+
+<form>
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>ID :</td>
+            <td>
+                <input id="nome" asp-for="Id" readonly />
+            </td>
+        </tr>
+        <tr>
+            <td>Nome :</td>
+            <td><input id="descricao" asp-for="Nome" /></td>
+        </tr>
+        <tr>
+            <td>Cpf :</td>
+            <td><input id="descricao" asp-for="Cpf" /></td>
+        </tr>
+        <tr>
+            <td>Email :</td>
+            <td><input id="descricao" asp-for="Email" /></td>
+        </tr>
+        <tr>
+            <td>Telefone :</td>
+            <td><input id="descricao" asp-for="Telefone" /></td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="button" id="incluir" value="Incluir" />
+                <input type="button" id="atualizar" value="Atualizar" />
+                <input type="button" id="excluir" value="Excluir" />
+            </td>
+        </tr>
+    </table>
+    <br />
+    <div id="msg"></div>
+</form>
+
+@section Scripts {
+    <script src="~/js/Pessoas/Cadastro.js"></script>
+}
