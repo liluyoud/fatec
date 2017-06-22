@@ -1,41 +1,40 @@
 ﻿@model Fatec.Models.Pessoa
-<h2>Pessoa</h2>
+
+<h2>Cadastro de Pessoas</h2>
+<hr />
+
+<div id="msg" class="alert" hidden></div>
 
 <form>
-    <table border="1" cellpadding="10">
-        <tr>
-            <td>ID :</td>
-            <td>
-                <input id="nome" asp-for="Id" readonly />
-            </td>
-        </tr>
-        <tr>
-            <td>Nome :</td>
-            <td><input id="descricao" asp-for="Nome" /></td>
-        </tr>
-        <tr>
-            <td>Cpf :</td>
-            <td><input id="descricao" asp-for="Cpf" /></td>
-        </tr>
-        <tr>
-            <td>Email :</td>
-            <td><input id="descricao" asp-for="Email" /></td>
-        </tr>
-        <tr>
-            <td>Telefone :</td>
-            <td><input id="descricao" asp-for="Telefone" /></td>
-        </tr>
+    <div class="form-group">
+        <label for="Id">Id</label>
+        <input asp-for="Id" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label for="Nome">Nome Completo</label>
+        <input asp-for="Nome" class="form-control" placeholder="Informe seu nome completo" />
+    </div>
 
-        <tr>
-            <td colspan="2">
-                <input type="button" id="incluir" value="Incluir" />
-                <input type="button" id="atualizar" value="Atualizar" />
-                <input type="button" id="excluir" value="Excluir" />
-            </td>
-        </tr>
-    </table>
-    <br />
-    <div id="msg"></div>
+    <div class="form-group">
+        <label for="Cpf">Cpf</label>
+        <input asp-for="Cpf" class="form-control" placeholder="Informe seu cpf no formato 999.999.999-99" />
+    </div>
+    <div class="form-group">
+        <label for="Id">E-mail</label>
+        <input asp-for="Email" class="form-control" placeholder="Informe seu email" />
+    </div>
+    <div class="form-group">
+        <label for="Telefone">Telefone</label>
+        <input asp-for="Telefone" class="form-control" placeholder="Informe seu telefone" />
+    </div>
+
+    <div class="alert alert-info">
+        <input type="button" id="incluir" value="Incluir" class="btn btn-info" style="width:150px" />
+        <input type="button" id="atualizar" value="Alterar" class="btn btn-info" style="width:150px" /> 
+        <input type="button" id="novo" value="Novo" class="btn btn-default" style="width:150px" />
+        <input type="button" id="excluir" value="Excluir" class="btn btn-default" style="width:150px" />
+    </div>
+    
 </form>
 
 @section Scripts {

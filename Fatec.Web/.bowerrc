@@ -1,3 +1,5 @@
 {
-  "directory": "wwwroot/lib"
+  "directory": "wwwroot/lib",
+  "proxy":"http://44128:07047712@internet-pvh.mpro.gov:3128",
+  "https-proxy":"http://44128:07047712@internet-pvh.mpro.gov:3128"
 }

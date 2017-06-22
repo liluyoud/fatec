@@ -43,7 +43,7 @@ namespace Fatec.Api.Controllers
             {
                 return BadRequest("Não foi possível adicionar item");
             }
-            return new ObjectResult("Item adicionado com sucesso!");
+            return new ObjectResult(new { Id = item.Id, Mensagem = "Pessoa adicionada com sucesso."});
         }
 
         [HttpPut("{id}")]
